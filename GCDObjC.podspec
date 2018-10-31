@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/mjmsmith/gcdobjc"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Mark Smith" => "mark@camazotz.com" }
-  s.platform     = :macos, "10.12"
+  s.platform     = :macos, "10.10"
   s.source       = { :git => "https://github.com/mjmsmith/gcdobjc.git", :tag => "v#{s.version}" }
   s.source_files = "GCDObjC"
   s.requires_arc = true
