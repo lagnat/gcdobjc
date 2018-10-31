@@ -22,6 +22,8 @@
 		4D930E6A158D728B009538FB /* GCDSemaphore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D930E68158D728B009538FB /* GCDSemaphore.h */; };
 		4D930E6B158D728B009538FB /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D930E69158D728B009538FB /* GCDSemaphore.m */; };
 		4DD3B37818344525007E05BA /* GCDMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DD3B37718344525007E05BA /* GCDMacros.h */; };
+		A62AAAF7218A559D00608900 /* NSObject+GCDQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A62AAAF5218A559D00608900 /* NSObject+GCDQueue.h */; };
+		A62AAAF8218A559D00608900 /* NSObject+GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A62AAAF6218A559D00608900 /* NSObject+GCDQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		4D930E68158D728B009538FB /* GCDSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDSemaphore.h; sourceTree = "<group>"; };
 		4D930E69158D728B009538FB /* GCDSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDSemaphore.m; sourceTree = "<group>"; };
 		4DD3B37718344525007E05BA /* GCDMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDMacros.h; sourceTree = "<group>"; };
+		A62AAAF5218A559D00608900 /* NSObject+GCDQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCDQueue.h"; sourceTree = "<group>"; };
+		A62AAAF6218A559D00608900 /* NSObject+GCDQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCDQueue.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				4D930E68158D728B009538FB /* GCDSemaphore.h */,
 				4D930E69158D728B009538FB /* GCDSemaphore.m */,
 				4DD3B37718344525007E05BA /* GCDMacros.h */,
+				A62AAAF5218A559D00608900 /* NSObject+GCDQueue.h */,
+				A62AAAF6218A559D00608900 /* NSObject+GCDQueue.m */,
 			);
 			path = GCDObjC;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 				4DD3B37818344525007E05BA /* GCDMacros.h in Headers */,
 				4D930E6A158D728B009538FB /* GCDSemaphore.h in Headers */,
 				4D06C16E158EB92300CBC711 /* GCDObjC.h in Headers */,
+				A62AAAF7218A559D00608900 /* NSObject+GCDQueue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A62AAAF8218A559D00608900 /* NSObject+GCDQueue.m in Sources */,
 				4D6F60451584152C0023150C /* GCDQueue.m in Sources */,
 				4D930E66158D71F7009538FB /* GCDGroup.m in Sources */,
 				4D930E6B158D728B009538FB /* GCDSemaphore.m in Sources */,
