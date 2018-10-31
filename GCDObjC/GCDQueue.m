@@ -77,6 +77,10 @@ static uint8_t mainQueueMarker[] = {0};
 - (instancetype)initWithDispatchQueue:(dispatch_queue_t)dispatchQueue {
   if ((self = [super init]) != nil) {
     self.dispatchQueue = dispatchQueue;
+
+    // Set a key so we can recognize ourselves
+	void *selfPtr = (__bridge void *) self;
+	dispatch_queue_set_specific(dispatchQueue, selfPtr, selfPtr, NULL);
   }
   
   return self;
@@ -93,7 +97,10 @@ static uint8_t mainQueueMarker[] = {0};
 }
 
 - (void)queueAndAwaitBlock:(dispatch_block_t)block {
-  dispatch_sync(self.dispatchQueue, block);
+  if ([self isOurQueue])
+  	block();
+  else
+    dispatch_sync(self.dispatchQueue, block);
 }
 
 - (void)queueAndAwaitBlock:(void (^)(size_t))block iterationCount:(size_t)count {
@@ -130,6 +137,11 @@ static uint8_t mainQueueMarker[] = {0};
 
 - (void)setContext:(void *)context forKey:(const void *)key {
   dispatch_queue_set_specific(self.dispatchQueue, key, context, NULL);
+}
+
+- (BOOL)isOurQueue {
+  void *selfPtr = (__bridge void *) self;
+  return dispatch_get_specific(selfPtr) == selfPtr;
 }
 
 @end
